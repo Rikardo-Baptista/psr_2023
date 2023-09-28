@@ -4,45 +4,20 @@
 #use imports here
 from colorama import Fore, Back, Style
 from time import time
-
+import math
 
 # define functions here ...
 
 def main():
-# import the time module
-    import time
-
-for (i to 50000000) 
+    inicio = time()
+    value = 50000000
     
+    for i in range(1,value):
+        resultado = math.sqrt(i)
+        #print("Resultado:", resultado)
 
-
-
-# get the current time in seconds since the epoch
-    seconds = time.time()
-
-    print("Seconds since epoch =", seconds)	
-
-# convert the time in seconds since the epoch to a readable format
-    local_time = time.ctime(seconds)
-
-    print("Local time:", local_time)
-
-# Atrasar o tempo de impressão
-    print("Printed immediately.")
-    time.sleep(2.4)
-    print("Printed after 2.4 seconds.")
-
-# Converte o tempo (segundos) em formato data (Ano,mes,hora)
-    result = time.localtime(seconds)
-    print("result:", result)
-    print("\nyear:", result.tm_year)
-    print("tm_hour:", result.tm_hour)
-
-# Converte o tempo (segundos) em formato data (Ano,mes,hora) em UTC (menos 1 hora)
-    result = time.gmtime(seconds)
-    print("result:", result)
-    print("\nyear:", result.tm_year)
-    print("tm_hour:", result.tm_hour)
+    fim = time()
+    print('A funcao demorou: ' + str(round(fim - inicio , 2)) + ' segundos ' + 'a ser executada!') 
 
 if __name__ == "__main__":
     main()
